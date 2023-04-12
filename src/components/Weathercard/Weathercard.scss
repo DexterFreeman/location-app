@@ -1,0 +1,18 @@
+.Weathercard{
+    height: 250px;
+    width: 360px;
+    background-image: url("https://media.istockphoto.com/id/878607638/photo/clouds-aerial-view.jpg?b=1&s=170667a&w=0&k=20&c=aa_no7g26uq0UnZYnNLZtZopKsjnST-rGqut5dnRv20=");
+    background-size: cover;
+    border-radius: 30px;
+    padding: 20px;
+
+    &__header{
+        display: flex;
+        align-items: center;
+    }
+
+    &__location{
+        font-weight: 600;
+    }
+
+}
