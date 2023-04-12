@@ -1,0 +1,20 @@
+.InfoCard{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 60px;
+    width: 90px;
+    border-radius: 15px;
+    color: black;
+
+    &__title{
+        font-size: 10px;
+    }
+
+   
+}
+
+.white{
+    color: white;
+}

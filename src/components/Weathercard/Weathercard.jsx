@@ -1,5 +1,6 @@
 import React from "react";
 import "./Weathercard.scss";
+import InfoCard from "../InfoCard/InfoCard";
 const Weathercard = ({ weatherData }) => {
   console.log(weatherData);
   return (
@@ -19,7 +20,9 @@ const Weathercard = ({ weatherData }) => {
             <p className="Weathercard__condition">{weatherData.current.condition.text}</p>
         </section>
         <section className="Weathercard__section-PVH">
-            
+            <InfoCard isTextDark={false} colour={"#1c2a42"} title={"Pressure"} frequency={`${weatherData.current.pressure_mb}mb`}/>
+            <InfoCard isTextDark={true} colour={"#cae16c"} title={"Visibility"} frequency={`${weatherData.current.vis_km} km` } />
+            <InfoCard isTextDark={true} colour={"white"} title={"Humidity"} frequency={`${weatherData.current.humidity}%` } />
         </section>
       </main>
 
