@@ -2,6 +2,8 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import './HomePage.scss'
 import Weathercard from '../../components/Weathercard/Weathercard';
+import Windcard from '../../components/Windcard/Windcard';
+import LineGraph from '../../components/LineGraph/LineGraph';
 const HomePage = () => {
     let [weather, setWeather] = useState(); 
 
@@ -22,13 +24,20 @@ const HomePage = () => {
     }, [])
   
     return (
-      <div className="App">
-        <header className="App-header">
+      <div className="homepage">
+        <header className="homepage__header">
           <h1>Location app</h1>
-          {weather && <Weathercard weatherData={weather}/>}
-            
+          
        
         </header>
+        <aside>
+
+        </aside>
+        <main className='homepage__main'>
+            {weather && <Weathercard weatherData={weather}/>}
+          {weather && <Windcard weatherData={weather}/>}
+        </main>
+        <LineGraph />
       </div>
     );
 }

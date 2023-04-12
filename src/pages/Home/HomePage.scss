@@ -1,0 +1,9 @@
+.homepage{
+    padding: 30px;
+
+    &__main{
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}

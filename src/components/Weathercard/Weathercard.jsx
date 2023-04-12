@@ -1,10 +1,12 @@
 import React from "react";
 import "./Weathercard.scss";
 import InfoCard from "../InfoCard/InfoCard";
+
 const Weathercard = ({ weatherData }) => {
   console.log(weatherData);
   return (
     <div className="Weathercard">
+    
       <header className="Weathercard__header">
         <img src={weatherData.current.condition.icon} alt="" srcset="" />
         <p className="Weathercard__location">
@@ -25,6 +27,7 @@ const Weathercard = ({ weatherData }) => {
             <InfoCard isTextDark={true} colour={"white"} title={"Humidity"} frequency={`${weatherData.current.humidity}%` } />
         </section>
       </main>
+
 
     </div>
   );
