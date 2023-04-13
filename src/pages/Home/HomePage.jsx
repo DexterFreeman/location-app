@@ -8,6 +8,7 @@ const HomePage = () => {
   let [pageContent, setPageContent] = useState();
   let [weather, setWeather] = useState();
   let [temperatureData, setTemperatureData] = useState();
+  let [news, setNews] = useState();
   let [currentState, setCurrentState] = useState();
 
   const getTemperatureData = (data) => {
@@ -25,7 +26,7 @@ const HomePage = () => {
     );
   };
 
-  const fetchData = (lat, long) => {
+  const fetchWeatherData = (lat, long) => {
     fetch(
       `http://api.weatherapi.com/v1/forecast.json?key=37eae624565d4429a98224757231104&q=${lat},${long}&days=3&aqi=no`
     )
@@ -36,12 +37,22 @@ const HomePage = () => {
         setCurrentState(states[0]);
       });
   };
+
+  const fetchNewsData = (lat, long) => {
+    fetch(
+      `https://api.worldnewsapi.com/search-news?api-key=b904a6e78b854db6ba34e709d8236722&location-filter=${lat},${long},10`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setNews(data);
+     
+      });
+  }
+
   useEffect(() => {
-    console.log("TEST");
     navigator.geolocation.getCurrentPosition(function (position) {
-      console.log("LAT " + position.coords.latitude);
-      console.log("LONG " + position.coords.longitude);
-      fetchData(position.coords.latitude, position.coords.longitude);
+      fetchWeatherData(position.coords.latitude, position.coords.longitude);
+      fetchNewsData(position.coords.latitude, position.coords.longitude);
     });
   }, []);
 
@@ -56,7 +67,7 @@ const HomePage = () => {
         );
         break;
       case states[1]:
-        setPageContent(<NewsContentContainer></NewsContentContainer>);
+        setPageContent(<NewsContentContainer newsData={news}/>);
     }
   }, [currentState]);
 
