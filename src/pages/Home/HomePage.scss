@@ -1,24 +1,30 @@
 .homepage{
     padding: 5vh;
     display: grid;
-    grid-template-rows: 10vh 40vh 40vh;
-    &__weather{
+    grid-template-rows: 10vh 80vh;
+    &__header{
         display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-    }
-    &__temperature{
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        &__today{
-            width: 250px;
-        }
-    }
+        text-align: center;
+        align-items: flex-start;
+        justify-content: space-between;
 
-    &__linegraph{
-        width: 400px;
-        
+        &-sidebar{
+            display: flex;
+            width: 15vh;
+            justify-content: space-between;
+        }
+        &-btn{
+            height: 50px;
+            aspect-ratio: 1;
+            background-color: transparent;
+            border: none;
+
+        }
+        &-btn:hover{
+           text-decoration: underline;
+           transform: translateY(1px);
+
+        }
     }
     
 }

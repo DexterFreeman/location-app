@@ -1,0 +1,19 @@
+
+.weathercontent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__weather{
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    &__temperature{
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        &__today{
+            width: 250px;
+        }
+    }
+}
