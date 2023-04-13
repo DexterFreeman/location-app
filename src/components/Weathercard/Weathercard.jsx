@@ -3,7 +3,6 @@ import "./Weathercard.scss";
 import InfoCard from "../InfoCard/InfoCard";
 
 const Weathercard = ({ weatherData }) => {
-  console.log(weatherData);
   return (
     <div className="Weathercard">
     

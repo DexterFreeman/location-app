@@ -1,7 +1,6 @@
 import React from 'react'
 import './Windcard.scss'
 const Windcard = ({weatherData}) => {
-    console.log(weatherData);
     return (
       <div className="Windcard">
       

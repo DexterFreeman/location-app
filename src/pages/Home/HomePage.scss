@@ -1,9 +1,24 @@
 .homepage{
-    padding: 30px;
-
-    &__main{
+    padding: 5vh;
+    display: grid;
+    grid-template-rows: 10vh 40vh 40vh;
+    &__weather{
         display: flex;
         gap: 20px;
         flex-wrap: wrap;
     }
+    &__temperature{
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        &__today{
+            width: 250px;
+        }
+    }
+
+    &__linegraph{
+        width: 400px;
+        
+    }
+    
 }
