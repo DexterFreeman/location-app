@@ -5,15 +5,15 @@
     background-size: cover;
     border-radius: 20px;
     padding: 20px;
-
     &__header{
         display: flex;
         align-items: center;
     }
-
-    &__location{
-        font-weight: 600;
-    } 
+    &__img{
+        height: 64px;
+        aspect-ratio: 1;
+        margin-right: 5px;
+    }
 
     &__main{
         height: 145px;

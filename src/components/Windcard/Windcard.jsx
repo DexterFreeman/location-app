@@ -6,7 +6,7 @@ const Windcard = ({weatherData}) => {
       <div className="Windcard">
       
         <header className="Windcard__header">
-          <img src={weatherData.current.condition.icon} alt="" srcset="" />
+          <img className='Windcard__img' src="https://cdn-icons-png.flaticon.com/512/172/172922.png" alt="" srcset="" />
             <p>{`Precipitation: ${weatherData.current.precip_mm}ml`}</p>
          
         </header>
