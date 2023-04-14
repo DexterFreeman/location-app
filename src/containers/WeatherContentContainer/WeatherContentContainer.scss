@@ -2,7 +2,9 @@
 .weathercontent{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-between;
+
     &__weather{
         display: flex;
         gap: 20px;
@@ -16,4 +18,20 @@
             width: 250px;
         }
     }
-}
+    &__prediction{
+   
+        display: flex;
+        flex-direction: column;
+      
+        gap: 20px;
+        &-text{
+            font-weight: 500;
+        }
+
+        &-container{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+    }
+} 

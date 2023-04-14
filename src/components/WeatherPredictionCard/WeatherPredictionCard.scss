@@ -1,0 +1,23 @@
+.WPCard{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    background-color: white;
+    height: 50px;
+    width: 250px;
+    border-radius: 20px;
+    gap: 10px;
+    padding: 10px;
+    &__img{
+        height: 50px;
+        aspect-ratio: 1;
+    }
+    &__date{
+        font-size: 14px;
+        color: gray;
+    }
+    &__condition{
+        font-size: 12px;
+        font-weight: bold;
+    }
+}

@@ -28,7 +28,7 @@ const HomePage = () => {
 
   const fetchWeatherData = (lat, long) => {
     fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=37eae624565d4429a98224757231104&q=${lat},${long}&days=3&aqi=no`
+      `http://api.weatherapi.com/v1/forecast.json?key=37eae624565d4429a98224757231104&q=${lat},${long}&days=7&aqi=no`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -68,6 +68,7 @@ const HomePage = () => {
         break;
       case states[1]:
         setPageContent(<NewsContentContainer newsData={news}/>);
+        break; 
     }
   }, [currentState]);
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import './Windcard.scss'
+import InfoCard from '../InfoCard/InfoCard';
 const Windcard = ({weatherData}) => {
     return (
       <div className="Windcard">
@@ -11,11 +12,21 @@ const Windcard = ({weatherData}) => {
         </header>
         <main className="Windcard__main">
           <section className="Windcard__section-wind">
-              <h1 className="Windcard__tempC">{weatherData.current.wind_mph} MPH</h1>
-              <p className="Windcard__condition">{weatherData.current.wind_dir}</p>
+            <div>
+              <h1 className="Windcard__tempC">Wind speed</h1>
+              <p className="Windcard__condition">{weatherData.current.wind_mph} MPH ({weatherData.current.wind_dir})</p>
+              </div>
+              <div>
+              <h1 className="Windcard__cloudcover">
+                Cloud coverage
+              </h1>
+              <p className="Windcard__cloudcover-frequency">
+                {`${weatherData.current.cloud} oktas`}
+              </p>
+              </div>
           </section>
-          <section className="Windcard__section-danger">
-              
+          <section className="Windcard__section-uv">
+          <InfoCard isTextDark={false} colour={"#1c2a42"} title={"Ultraviolet"} frequency={`${weatherData.current.uv}UVI`}/>
           </section>
         </main>
   

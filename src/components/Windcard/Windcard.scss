@@ -26,6 +26,11 @@
         display: flex;
         flex-direction: row;
         gap: 15px;
+    
+    }
+    &__section-wind{
+        display: flex;
+        gap: 15px
     }
 
 }

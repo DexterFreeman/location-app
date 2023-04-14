@@ -1,5 +1,8 @@
 .homepage{
-    padding: 5vh;
+    height: 95vh;
+    padding-top: 5vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
     display: grid;
     grid-template-rows: 10vh 80vh;
     &__header{

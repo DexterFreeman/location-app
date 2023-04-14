@@ -1,16 +1,5 @@
-
-
-.newscontent__article{
-    display: flex;
-    align-items: center;
-   &-img{
-        z-index: 0;
-        height: 450px;
-        width: 700px;
-        position: absolute;
-        left: 40vw;
-   }    
-   
+.newscontent {
+     display: flex;
+     flex-direction: column;
+     gap: 150px;
 }
-
-       
