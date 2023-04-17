@@ -11,7 +11,7 @@ const HomePage = () => {
   let [temperatureData, setTemperatureData] = useState();
   let [news, setNews] = useState();
   let [currentState, setCurrentState] = useState();
-
+   
   const getTemperatureData = (data) => {
     setTemperatureData(
       data.filter((obj) => {
