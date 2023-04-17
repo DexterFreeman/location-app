@@ -8,7 +8,8 @@ import WeatherPredictionCard from '../../components/WeatherPredictionCard/Weathe
 
 
 const WeatherContentContainer = ({weather, temperatureData}) => {
-
+  console.log(weather)
+  console.log(temperatureData)
   const preditctionJSX = () => {
     let removeToday = [...weather.forecast.forecastday]
     removeToday.shift()

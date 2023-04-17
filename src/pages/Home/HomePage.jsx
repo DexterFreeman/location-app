@@ -3,8 +3,9 @@ import { useEffect, useState } from "react";
 import "./HomePage.scss";
 import WeatherContentContainer from "../../containers/WeatherContentContainer/WeatherContentContainer";
 import NewsContentContainer from "../../containers/NewsContentContainer/NewsContentContainer";
+import TodoList from "../../containers/TodoList/TodoList";
 const HomePage = () => {
-  const states = ["weather", "news"];
+  const states = ["weather", "news", "todo"];
   let [pageContent, setPageContent] = useState();
   let [weather, setWeather] = useState();
   let [temperatureData, setTemperatureData] = useState();
@@ -69,13 +70,31 @@ const HomePage = () => {
       case states[1]:
         setPageContent(<NewsContentContainer newsData={news}/>);
         break; 
+
+      case states[2]:
+        setPageContent(<TodoList/>);
+        break; 
     }
   }, [currentState]);
+
+  const greetingJSX = () => {
+    let today = new Date();;
+    let hours = today.getHours();
+    if (hours < 12){
+      return "Good morning"; 
+    }
+    else if (hours < 17){
+      return "Good afternoon"; 
+    }
+    else if (hours > 17) {
+      return "Good evening"; 
+    }
+  }
 
   return (
     <div className="homepage">
       <header className="homepage__header">
-        <h1>Location app</h1>
+        <h1>{greetingJSX()}!</h1>
         <div className="homepage__header-sidebar">
           <button
             onClick={() => {
@@ -92,6 +111,14 @@ const HomePage = () => {
             className="homepage__header-btn"
           >
             News
+          </button>
+          <button
+            onClick={() => {
+              setCurrentState(states[2]);
+            }}
+            className="homepage__header-btn"
+          >
+            Todo List
           </button>
         </div>
       </header>

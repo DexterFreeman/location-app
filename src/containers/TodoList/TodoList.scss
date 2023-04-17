@@ -1,0 +1,44 @@
+.Todolist{
+
+    form{
+        display: flex;
+        height: 120px;
+    }
+    &__container{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+    }
+    &__main{
+        width: 85vw;
+        border: 1px solid black;
+        border-radius: 15px;
+        height: 60vh;
+        padding: 20px;
+    }
+
+    &__addbtn{
+        height: 58px;
+        
+        width: 80px;
+        background-color: white;
+        
+        border: 1px solid black;
+        border-radius: 10px;
+        margin-left: 10px;
+    }
+    &__btn{
+        background-color: white;
+        border: none;
+      
+        font-size: 30px;
+    }
+    &__input{
+        height: 45px;
+        width: 300px;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 5px;
+    }
+}

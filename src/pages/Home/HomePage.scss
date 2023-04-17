@@ -3,13 +3,14 @@
     padding-top: 5vh;
     padding-left: 5vh;
     padding-right: 5vh;
-    display: grid;
-    grid-template-rows: 10vh 80vh;
+    display: flex;
+    flex-direction: column;
     &__header{
         display: flex;
         text-align: center;
         align-items: flex-start;
         justify-content: space-between;
+        margin-bottom: 10%;
 
         &-sidebar{
             display: flex;
