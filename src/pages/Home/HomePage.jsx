@@ -28,7 +28,6 @@ const HomePage = () => {
   };
 
   const key = process.env.REACT_APP_API_KEY;
-  console.log(key)
   const fetchWeatherData = (lat, long, key) => {
     fetch(
       `http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${lat},${long}&days=7&aqi=no`
