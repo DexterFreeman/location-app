@@ -27,9 +27,11 @@ const HomePage = () => {
     );
   };
 
-  const fetchWeatherData = (lat, long) => {
+  const key = process.env.REACT_APP_API_KEY;
+  console.log(key)
+  const fetchWeatherData = (lat, long, key) => {
     fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=37eae624565d4429a98224757231104&q=${lat},${long}&days=7&aqi=no`
+      `http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${lat},${long}&days=7&aqi=no`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -52,7 +54,8 @@ const HomePage = () => {
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(function (position) {
-      fetchWeatherData(position.coords.latitude, position.coords.longitude);
+      
+      fetchWeatherData(position.coords.latitude, position.coords.longitude, process.env.REACT_APP_API_KEY);
       fetchNewsData(position.coords.latitude, position.coords.longitude);
     });
   }, []);
